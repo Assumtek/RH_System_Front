@@ -36,7 +36,7 @@ export function Header() {
 
     async function getUser() {
       try {
-        const response = await api.get("/me", {
+        const response = await api.get("/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUrlUser(response.data.profilePhoto);

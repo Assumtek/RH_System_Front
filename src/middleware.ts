@@ -54,7 +54,7 @@ async function validateToken(token:string) {
 
 
     try {
-        await api.get("/me", {
+        await api.get("/auth/me", {
             headers:{
                 Authorization: `Bearer ${token}`
             }
